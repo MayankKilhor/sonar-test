@@ -3,14 +3,6 @@
 
 
 pipeline {
-    agent {
-      docker {
-        image 'nexus.cicd.sv2.247-inc.net:5000/247nodejs-build-centos7:16.13.1_npm_v6_jenkins_oss'
-        // assume HTTP_PROXY_URL is defined as a jenkins system level env var
-        label 'build_sv2'
-        args "-e HTTP_PROXY=${env.HTTP_PROXY_URL}"
-      }
-    }
     stages {
         stage('Install') {
           steps {
