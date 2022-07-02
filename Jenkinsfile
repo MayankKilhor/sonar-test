@@ -1,4 +1,4 @@
-@Library('jenkins-pipeline-util') _
+//@Library('jenkins-pipeline-util') _
 
 
 
@@ -7,9 +7,15 @@ pipeline {
         docker {
             image 'node'
             args '-u root'
+            
         }
     }
     stages {
+        stage('init') {
+      scripts {
+        library "shared-library@master"
+      }
+   }
         stage('Install') {
           steps {
             sh 'env'
