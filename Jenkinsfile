@@ -11,11 +11,7 @@ pipeline {
         }
     }
     stages {
-        stage('init') {
-      scripts {
-        library "shared-library@master"
-      }
-   }
+        
         stage('Install') {
           steps {
             sh 'env'
