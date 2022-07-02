@@ -12,14 +12,14 @@ pipeline {
     }
     stages {
         
-        stage('Install') {
-          steps {
-            sh 'env'
-            script {
-              setupStandardNodeBuild(script: this)
-            }
-          }
-        }
+//             stage('Install') {
+//               steps {
+//                 sh 'env'
+//                 script {
+//                   setupStandardNodeBuild(script: this)
+//                 }
+//               }
+//             }
         // stage('Validate & Publish Report') {
         //   steps {
         //     script {
